@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scion Quest</title>
+  <meta name="description" content="A playable game that explains how git works, where it strains under AI-agent swarms, and how Anthropic's Scion source control differs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="hud">
+    <button class="brand" data-nav="map" title="World map">🌱 SCION<span>QUEST</span></button>
+    <div class="hud-right">
+      <span class="coins" title="Merge Coins">🪙 <b id="coins">0</b></span>
+      <button class="btn small" id="journal-btn">📓 Journal <b id="card-count">0</b></button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <dialog id="journal">
+    <div class="journal-head">
+      <h2>📓 Fact Journal</h2>
+      <button class="btn small" id="journal-close">✕</button>
+    </div>
+    <p class="muted legend">
+      <span class="badge src-article">📰 Article</span> stated in Anthropic's post ·
+      <span class="badge src-git">🛠 Git fact</span> standard git behaviour ·
+      <span class="badge src-sim">🎮 Simplification</span> game modelling, not from the article
+    </p>
+    <div id="journal-list"></div>
+  </dialog>
+
+  <div id="toasts" aria-live="polite"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/levels/l1-clone.js"></script>
+  <script src="js/levels/l2-push.js"></script>
+  <script src="js/levels/l3-model.js"></script>
+  <script src="js/levels/l4-bisect.js"></script>
+  <script src="js/levels/l5-cache.js"></script>
+  <script src="js/levels/l6-finale.js"></script>
+  <script>SQ.boot();</script>
+</body>
+</html>
